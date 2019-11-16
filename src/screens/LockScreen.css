@@ -1,0 +1,40 @@
+.screen {
+    height: 100vh;
+}
+
+.locked {
+    position: relative;
+    width: 100%;
+    top: 25%;
+}
+
+.time {
+    font-size: 5em;
+    position: relative;
+    top: 20%;
+}
+
+.date {
+    position: relative;
+    top: 21%;
+}
+
+
+
+.easein-enter {
+    opacity: 0.01;
+}
+
+.easein-enter.easein-enter-active {
+    opacity: 1;
+    transition: opacity 100ms ease-in;
+}
+
+.easein-leave {
+    opacity: 1;
+}
+
+.easein-leave.easein-leave-active {
+    opacity: 0.01;
+    transition: opacity 100ms ease-out;
+}

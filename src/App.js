@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { LockScreen } from './screens/LockScreen';
+import logo from './images/hi1.png';
+import logoConstruction from './images/hi2.png';
+import {isMobile} from './util';
 
 function App() {
+  const lockScreen = (
+    <div>
+      <img src={logo} class="logo" alt="Hello" />
+      <h1 className="h1">Koushik Mohan's Portfolio</h1>
+      <span>{`${isMobile() ? '>>>> Swipe right':'Click' }`} to unlock</span>
+    </div>);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LockScreen lockedscreen={lockScreen}>
+          <div class="home">
+            <img src={logoConstruction} class="logo" alt="Hello" />
+            <h1>This page is under construction</h1>
+          </div>
+      </LockScreen>
     </div>
   );
 }

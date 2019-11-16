@@ -1,9 +1,17 @@
 .App {
   text-align: center;
+  height: 100vh;
+  background-image: url("./images/wallpaper.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+
 }
 
-.App-logo {
-  height: 40vmin;
+.logo {
+  height: 13vh;
+  width: 13vh;
 }
 
 .App-header {
@@ -19,4 +27,12 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.h1 {
+  font-size: 25px;
+}
+
+.home {
+  margin-top: 25%;
 }
