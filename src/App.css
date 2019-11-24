@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-
+  overflow: hidden;
 }
 
 .logo {
@@ -31,8 +31,4 @@
 
 .h1 {
   font-size: 25px;
-}
-
-.home {
-  margin-top: 25%;
 }

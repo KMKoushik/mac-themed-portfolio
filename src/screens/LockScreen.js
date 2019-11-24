@@ -1,5 +1,4 @@
 import React, { useState,useEffect } from 'react';
-import '../App.css';
 import '../screens/LockScreen.css';
 import { getTimeString, getDateString } from '../util.js';
 import { CSSTransitionGroup } from 'react-transition-group';
@@ -12,14 +11,14 @@ function LockScreen(props) {
     getTime();
     getDate();
     document.addEventListener('touchmove', () => {setIsLocked(false)}, false);
-  }, [])
+  }, []);
   const [timeString, setTimeString] = useState();
   const [dateString, setDateString] = useState();
 
   /*Components */
 
   const Locked = props => (
-    <div key="1" className="screen" onClick = { () => setIsLocked(false) }>
+    <div className="screen" onClick = { () => setIsLocked(false) }>
       <div className="time">{ timeString }</div>
       <div className="date">{ dateString }</div>
       <div className="locked">
@@ -34,14 +33,16 @@ function LockScreen(props) {
 
   const getBody = () => {
     if (isLocked) {
-      return (<Locked > { props.lockedscreen } </Locked>)
+      return (<Locked key="1"> { props.lockedscreen } </Locked>)
     }
     return (<UnLocked key="2"> { props.children } </UnLocked>)
   }
 
   const getTime = () => {
-    setTimeString(getTimeString());
-    setTimeout(getTime,60000);
+    if (isLocked) {
+      setTimeString(getTimeString());
+      //setTimeout(getTime,60000);
+    }
   }
 
   const getDate = () => setDateString(getDateString());
@@ -56,4 +57,4 @@ function LockScreen(props) {
 }
 
 
-export  { LockScreen};
+export default LockScreen;

@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import { LockScreen } from './screens/LockScreen';
+import LockScreen from './screens/LockScreen';
+import Home from './screens/Home'
 import logo from './images/hi1.png';
-import logoConstruction from './images/hi2.png';
-import {isMobile} from './util';
+import { isMobile } from './util';
 
 function App() {
   const lockScreen = (
@@ -16,10 +16,7 @@ function App() {
   return (
     <div className="App">
       <LockScreen lockedscreen={lockScreen}>
-          <div class="home">
-            <img src={logoConstruction} class="logo" alt="Hello" />
-            <h1>This page is under construction</h1>
-          </div>
+        <Home/>
       </LockScreen>
     </div>
   );

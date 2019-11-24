@@ -1,0 +1,26 @@
+.home {
+  height: 100vh;
+}
+
+.menubar {
+  height: 3vh;
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  color: #fff;
+  text-align: start;
+}
+
+.menubar-title {
+  vertical-align: middle;
+  padding: 7px;
+  font-weight: 500;
+}
+
+.menubar-datetime {
+  position: absolute;
+  right: 5px;
+  top: 2px;
+  vertical-align: middle;
+  padding-right: 7px; 
+}
