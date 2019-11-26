@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'MacOSFont';
+  src: local('MacOSFont'), url(./fonts/SanFranciscoText-Regular.otf) format('truetype');
+}
+
+
 .App {
   text-align: center;
   height: 100vh;
@@ -7,6 +13,7 @@
   background-size: cover;
   color: white;
   overflow: hidden;
+  font-family: 'MacOSFont'
 }
 
 .logo {

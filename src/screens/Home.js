@@ -8,6 +8,7 @@ import snake from '../images/snake.svg';
 import contact from '../images/contact.svg';
 import AboutMe from './AboutMe';
 import Experience from './Experience';
+import SnakeBoard from './SnakeBoard'
 
 export default function Home(props) {
 
@@ -28,7 +29,7 @@ export default function Home(props) {
         </DockMenuGroup>
         <DockMenuGroup name="snake" icon={snake} title="Snake">
           <DockMenuGroup.Modal>
-            Snake
+            <SnakeBoard />
           </DockMenuGroup.Modal>
         </DockMenuGroup>
         <DockMenuGroup name="contact" icon={contact} title="Contact">

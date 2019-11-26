@@ -25,9 +25,9 @@ function DockMenu(props) {
 function DockMenuGroup(props) {
   return (
     <div>
-      <Icon icon={props.icon} title={props.title} isSelected={props.isSelected} onClick={() => { props.onChange(props.name) }}/>
-      {props.isSelected ? <span className="dock-menu-selected">.</span> : null}  
-      {props.isSelected ? React.cloneElement(props.children, { title: props.title, onClose : props.onChange }) : null}
+      <Icon icon={props.icon} title={props.title} isSelected={props.isSelected} onClick={() => { props.onChange(props.name) }} />
+      {props.isSelected ? <span className="dock-menu-selected">.</span> : null}
+      {props.isSelected ? React.cloneElement(props.children, { title: props.title, onClose: props.onChange }) : null}
     </div>
   )
 }
@@ -44,20 +44,19 @@ const Icon = props => {
 }
 
 const Modal = props => {
-  console.log(props.onClose);
   return (
-    <div className="dock-menu-modal">
-      <div className="dock-menu-modal-menubar">
-        <div className="dock-menu-modal-option">
-          <button className="dock-menu-modal-close" onClick={() => props.onClose('')}></button>
-          <button className="dock-menu-modal-yellow"></button>
-          <button className="dock-menu-modal-grey"></button>
+      <div className="dock-menu-modal">
+        <div className="dock-menu-modal-menubar">
+          <div className="dock-menu-modal-option">
+            <button className="dock-menu-modal-close" onClick={() => props.onClose('')}></button>
+            <button className="dock-menu-modal-yellow"></button>
+            <button className="dock-menu-modal-grey"></button>
+          </div>
+          <span className="dock-menu-modal-menubar-title">{props.title}</span>
         </div>
-        <span className="dock-menu-modal-menubar-title">{props.title}</span>
+        {props.children}
+        <button className="dock-menu-modal-close-mobile" onClick={() => props.onClose('')}></button>
       </div>
-      {props.children}
-      <button className="dock-menu-modal-close-mobile" onClick={() => props.onClose('')}></button>
-    </div>
   );
 }
 

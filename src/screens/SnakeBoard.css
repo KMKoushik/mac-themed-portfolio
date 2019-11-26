@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'SnakeFont';
+    src: local('SnakeFont'), url(../fonts/Snake.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'SnakeFont2';
+    src: local('SnakeFont2'), url(../fonts/Sanzen.ttf) format('truetype');
+}
+
+.board{
+    height: 600px;
+    width: 600px;
+    border: 1px solid #fff;
+    position: relative;
+    padding: 1px;
+}
+
+.snake-cell{
+    height: 20px;
+    width: 20px;
+    border: 1px solid #048000;
+    position: absolute;
+    border-radius: 36%;
+    background: #048000;
+    z-index: 2;
+}
+
+.food-cell{
+    height: 15px;
+    width: 15px;
+    border: 1px solid #ffaf47;
+    position: absolute;
+    border-radius: 50%;
+    background: #ffaf47; 
+}
+
+.header{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 3em;
+    font-family: SnakeFont2;
+}
+
+.gameover{
+    align-items: center;
+    justify-content: center;
+    font-family: SnakeFont;
+    display: grid;
+}
+
+.button{
+    margin-left: 30%;
+    width: 150px;
+    height: 40px;
+    background-color: #ff8b2b;
+    border: none;
+    color: #fff;
+    font-family: SnakeFont;
+}
