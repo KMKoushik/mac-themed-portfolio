@@ -28,7 +28,7 @@ export default function Home(props) {
           </DockMenuGroup.Modal>
         </DockMenuGroup>
         <DockMenuGroup name="snake" icon={snake} title="Snake">
-          <DockMenuGroup.Modal>
+          <DockMenuGroup.Modal backgroundColor="#282c34">
             <SnakeBoard />
           </DockMenuGroup.Modal>
         </DockMenuGroup>

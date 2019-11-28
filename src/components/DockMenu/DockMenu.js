@@ -45,18 +45,20 @@ const Icon = props => {
 
 const Modal = props => {
   return (
-      <div className="dock-menu-modal">
-        <div className="dock-menu-modal-menubar">
-          <div className="dock-menu-modal-option">
-            <button className="dock-menu-modal-close" onClick={() => props.onClose('')}></button>
-            <button className="dock-menu-modal-yellow"></button>
-            <button className="dock-menu-modal-grey"></button>
-          </div>
-          <span className="dock-menu-modal-menubar-title">{props.title}</span>
+    <div className="dock-menu-modal" style={{backgroundColor: `${props.backgroundColor}`}}>
+      <div className="dock-menu-modal-menubar">
+        <div className="dock-menu-modal-option">
+          <button className="dock-menu-modal-close" onClick={() => props.onClose('')}></button>
+          <button className="dock-menu-modal-yellow"></button>
+          <button className="dock-menu-modal-grey"></button>
         </div>
-        {props.children}
-        <button className="dock-menu-modal-close-mobile" onClick={() => props.onClose('')}></button>
+        <span className="dock-menu-modal-menubar-title">{props.title}</span>
       </div>
+      <div className="modal-content">
+        {props.children}
+      </div>
+      <button className="dock-menu-modal-close-mobile" onClick={() => props.onClose('')}></button>
+    </div>
   );
 }
 

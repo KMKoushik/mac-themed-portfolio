@@ -16,12 +16,12 @@ export default class SnakeBoard extends React.Component {
   }
 
   initGame() {
-    this.setState({ snakeCoordinates: [[1, 1], [1, 2], [1, 3], [2, 3]], foodCoordinate: [4, 4], direction: 'right', headx: 2, heady: 3, score: 0, gameOver: false })
+    this.setState({ snakeCoordinates: [[1, 1], [1, 2], [1, 3], [2, 3]], foodCoordinate: [4, 4], direction: 'right', headx: 2, heady: 3, score: 0, gameOver: false, started: false })
   }
 
   componentDidMount() {
     this.generateFood();
-    setInterval(this.moveSnake, 150);
+    setInterval(this.moveSnake, 100);
     document.addEventListener('keydown', this.getDirection);
   }
 
@@ -85,8 +85,13 @@ export default class SnakeBoard extends React.Component {
     let snakeAteFood = false;
     if (this.state.headx === this.state.foodCoordinate[0] && this.state.heady === this.state.foodCoordinate[1]) {
       snakeAteFood = true;
-      this.setState({ score: this.state.score + 1 })
-      this.generateFood()
+      let score = this.state.score + 1;
+      console.log(score % 5);
+      if (score % 5 === 0) {
+        score += 5;
+      }
+      this.setState({ score });
+      this.generateFood();
     }
     return snakeAteFood;
   }
@@ -95,7 +100,7 @@ export default class SnakeBoard extends React.Component {
     let gameOver = this.isGameOver();
     if (!gameOver) {
       return (
-        <div style={{backgroundColor:'#282c34'}}>
+        <div style={{ backgroundColor: '#282c34', height:'100%' }}>
           <div className="board">
             <Snake coordinates={this.state.snakeCoordinates} />
             <div className="food-cell" style={{ "left": this.state.foodCoordinate[0] * 4 + "%", "top": this.state.foodCoordinate[1] * 4 + "%" }}> </div>
@@ -107,7 +112,7 @@ export default class SnakeBoard extends React.Component {
       );
     } else {
       return (
-        <div style={{backgroundColor:'#282c34'}}>
+        <div style={{backgroundColor:'#282c34', height:'100%'}}>
           <div className="board gameover">
             <p >Game Over! Score : {this.state.score}</p>
             <button onClick={() => this.initGame()} className="button">Play again</button>

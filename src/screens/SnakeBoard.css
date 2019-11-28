@@ -8,8 +8,8 @@
 }
 
 .board{
-    height: 600px;
-    width: 600px;
+    height: 500px;
+    width: 500px;
     border: 1px solid #fff;
     position: relative;
     padding: 1px;
