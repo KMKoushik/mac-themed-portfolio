@@ -1,14 +1,17 @@
 import React from 'react';
-import { getTimeString, getDateString } from '../util.js';
+import { getTimeString, getDateString, isMobile } from '../util.js';
 import { DockMenu, DockMenuGroup } from '../components/DockMenu/DockMenu.js';
 import './Home.css';
 import about from '../images/about.svg';
 import work from '../images/work.svg';
 import snake from '../images/snake.svg';
 import contact from '../images/contact.svg';
+import project from '../images/project.svg';
 import AboutMe from './AboutMe';
 import Experience from './Experience';
-import SnakeBoard from './SnakeBoard'
+import SnakeBoard from './SnakeBoard';
+import Contact from './Contact';
+import Projects from './Projects';
 
 export default function Home(props) {
 
@@ -27,14 +30,22 @@ export default function Home(props) {
             <Experience />
           </DockMenuGroup.Modal>
         </DockMenuGroup>
-        <DockMenuGroup name="snake" icon={snake} title="Snake">
-          <DockMenuGroup.Modal backgroundColor="#282c34">
-            <SnakeBoard />
-          </DockMenuGroup.Modal>
-        </DockMenuGroup>
+
+        {isMobile() ? null :
+          <DockMenuGroup name="snake" icon={snake} title="Snake">
+            <DockMenuGroup.Modal backgroundColor="#282c34">
+              <SnakeBoard />
+            </DockMenuGroup.Modal>
+          </DockMenuGroup>
+        }
         <DockMenuGroup name="contact" icon={contact} title="Contact">
           <DockMenuGroup.Modal>
-            Contact
+            <Contact />
+          </DockMenuGroup.Modal>
+        </DockMenuGroup>
+        <DockMenuGroup name="project" icon={project} title="Projects">
+          <DockMenuGroup.Modal>
+            <Projects />
           </DockMenuGroup.Modal>
         </DockMenuGroup>
       </DockMenu>

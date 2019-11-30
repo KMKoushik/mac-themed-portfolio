@@ -12,6 +12,9 @@ function DockMenu(props) {
     <div className="dock">
       <div className="dock-menu">
         {React.Children.map(props.children, dockMenuGroup => {
+          if (dockMenuGroup === null) {
+            return null;
+          }
           if (menu === dockMenuGroup.props.name) {
             return React.cloneElement(dockMenuGroup, { isSelected: true, onChange: onChange });
           }

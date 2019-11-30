@@ -14,9 +14,10 @@ export default function AboutMe() {
         <div style={{width:'100%'}}>
           <h1>Koushik Mohan</h1>
           <ul>
-            <li>Fullstack Software developer</li>
+            <li><b>Fullstack Software developer</b></li>
             <li>Experience : 2 years</li>
-            <li>Memory : 1 Brain</li>
+            <li>Processor : 1 Brain</li>
+            <li>Memory : 1TB expandable to 2.5 PetaByte</li>
             <li>Serial Number : <tel>+91-7708431646</tel></li>
           </ul>
 

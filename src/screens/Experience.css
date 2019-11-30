@@ -1,5 +1,4 @@
 .experienceItem {
-  font-size: 1em;
   line-height: 1.75em;
   border-top: 3px solid;
   border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
@@ -22,7 +21,6 @@
   text-align: center;
   line-height: 1.25em;
   color: #fff;
-  font-size: 1em;
 }
 
 .experienceItem:nth-child(odd) {
