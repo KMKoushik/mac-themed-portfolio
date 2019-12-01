@@ -17,11 +17,9 @@ export default function AboutMe() {
             <li><b>Fullstack Software developer</b></li>
             <li>Experience : 2 years</li>
             <li>Processor : 1 Brain</li>
-            <li>Memory : 1TB expandable to 2.5 PetaByte</li>
+            <li>Memory : 1TB expandable to 2.5 PB</li>
             <li>Serial Number : <tel>+91-7708431646</tel></li>
           </ul>
-
-         
         </div>
       </div>
     </div>

@@ -52,11 +52,16 @@ ul {
   }
   
   .profile-data{
-    width: 97%;
+    width: 80%;
     height: auto;
     align-items: center;
     justify-content: center;
     display: flex;
+    margin: auto;
+  }
+
+  .profile-data h1{
+    text-align: center;
   }
 
   .image{

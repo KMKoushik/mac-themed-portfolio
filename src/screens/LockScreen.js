@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import '../screens/LockScreen.css';
 import { getTimeString, getDateString } from '../util.js';
+import Home from './Home'
 import { CSSTransitionGroup } from 'react-transition-group';
 
 function LockScreen(props) {
@@ -26,7 +27,7 @@ function LockScreen(props) {
       </div>
     </div>
   );
-  const UnLocked = props => (<div className="screen" style={{position:'absolute',width:'100%'}}>{props.children}</div>);
+  const UnLocked = () => (<div className="screen" style={{ position: 'absolute', width: '100%' }}><Home lock={setIsLocked}/></div>);
 
 
   /*Util methods */

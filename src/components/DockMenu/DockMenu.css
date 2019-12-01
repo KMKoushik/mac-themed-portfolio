@@ -39,6 +39,71 @@
   top: 44%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: pulse .1s ease-in;
+}
+
+.dock-menu-modal-hide {
+  position: fixed;
+  max-width: 70%;
+  min-width: 50vh;
+  height: 70vh;
+  background-color: aliceblue;
+  border: 1px solid aliceblue;
+  border-radius: 6px 6px 6px 6px;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulseOut .3s ease-in;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    height: 20vh;
+  }
+
+  100% {
+    opacity: 1;
+    height: 70vh;
+  }
+}
+
+@keyframes pulseOut {
+  0% {
+    height: 70vh;
+    display: block;
+  }
+
+  25% {
+    height: 50vh;
+    max-width: 40vh;
+    min-width: 40vh;
+    top: 60%;
+  }
+
+  50% {
+    height: 30vh;
+    max-width: 20vh;
+    min-width: 20vh;
+    top: 70%;
+    content: '';
+  }
+
+  50% {
+    height: 10vh;
+    max-width: 10vh;
+    min-width: 10vh;
+    top: 70%;
+    content: '';
+  }
+
+  100% {
+    height: 5vh;
+    max-width: 5vh;
+    min-width: 5vh;
+    top: 100%;
+    display: none;
+  }
 }
 
 .dock-menu-modal-menubar {
@@ -51,7 +116,7 @@
   padding-top: 5px;
 }
 
-.modal-content{
+.modal-content {
   overflow: auto;
   width: 100%;
   height: 93%;
@@ -71,7 +136,8 @@
 
 .dock-menu-modal-close {
   background-color: rgb(206, 78, 39);
-  height: 64%;
+  height: 17px;
+  width: 17px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -79,7 +145,8 @@
 
 .dock-menu-modal-yellow {
   background-color: rgb(255, 172, 64);
-  height: 64%;
+  height: 17px;
+  width: 17px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -88,16 +155,19 @@
 
 .dock-menu-modal-grey {
   background-color: rgb(182, 181, 181);
-  height: 64%;
+  height: 17px;
+  width: 17px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
   margin-left: 4px;
 }
 
-.dock-menu-modal-close-mobile {
+.dock-menu-modal-close-parent {
   display: none;
 }
+
+
 
 /*For mobile phones*/
 @media screen and (max-width: 600px) {
@@ -138,16 +208,37 @@
     display: none;
   }
 
-  .dock-menu-modal-close-mobile {
-    background-color:rgb(206, 78, 39);
-    height: 4%;
-    border-radius: 50%;
-    border: none;
+  .dock-menu-modal-close-parent {
+    display: block;
+    bottom: 2%;
+    left: 45%;
     cursor: pointer;
-    display: inline;
-    width: 5%;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+  }
+
+  /* .dock-menu-modal-close-mobile {
+    display: flex;
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    
+  }
+  .dock-menu-modal-close-mobile:before, .dock-menu-modal-close-mobile:after {
+    content: ' ';
     position: fixed;
     bottom: 2%;
-    left: 50%;
+    height: 33px;
+    width: 2px;
+    background-color: #333;
   }
+  .dock-menu-modal-close-mobile:before {
+    transform: rotate(45deg);
+  }
+  .dock-menu-modal-close-mobile:after {
+    transform: rotate(-45deg);
+  } */
+  
 }
