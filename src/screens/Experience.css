@@ -9,6 +9,7 @@
   counter-increment: section;
   position: relative;
   color: #808080;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 .experienceItem:before {
   content: counter(section);
@@ -21,6 +22,7 @@
   text-align: center;
   line-height: 1.25em;
   color: #fff;
+  
 }
 
 .experienceItem:nth-child(odd) {

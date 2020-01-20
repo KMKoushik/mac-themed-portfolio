@@ -5,6 +5,8 @@ import snakeImage from '../images/project/snake.png'
 import fluxoImage from '../images/project/fluxo.png'
 import codeceptImage from '../images/project/codecept.png'
 import iotImage from '../images/project/IOT-gateway.png'
+import Bounce from 'react-reveal/Bounce';
+
 
 export default function Projects() {
   return (
@@ -50,14 +52,19 @@ export default function Projects() {
 
 const ProjectItem = (props) => {
   return (
-    <div className="project-item" onClick={() => window.open(props.url, '_blank')}>
-      <img src={props.image} alt={props.title} class="project-img" />
-      <div className="project-details">
-        <h2>{props.title}</h2>
-        <p>{props.description}</p>
-        <p>Tech stack: {props.tech}</p>
+    <Bounce>
+      <div className="project-item" onClick={() => window.open(props.url, '_blank')}>
+        <div>
+          <img src={props.image} alt={props.title} class="project-img" />
+          <div className="project-details">
+            <h2>{props.title}</h2>
+            <p>{props.description}</p>
+            <p>Tech stack: {props.tech}</p>
+          </div>
+          <p>{props.title}</p>
+        </div>
       </div>
-      <p>{props.title}</p>
-    </div>
+    </Bounce>
+
   )
 } 
