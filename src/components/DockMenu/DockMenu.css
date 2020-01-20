@@ -27,19 +27,17 @@
 }
 
 
-
 .dock-menu-modal {
   position: fixed;
   max-width: 70%;
   min-width: 50vh;
   height: 70vh;
-  background-color: aliceblue;
-  border: 1px solid aliceblue;
+  background-color:#fff;
   border-radius: 6px 6px 6px 6px;
   top: 44%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: pulse .1s ease-in;
+  animation: pulse .14s ease-in;
 }
 
 .dock-menu-modal-hide {
@@ -47,8 +45,7 @@
   max-width: 70%;
   min-width: 50vh;
   height: 70vh;
-  background-color: aliceblue;
-  border: 1px solid aliceblue;
+  background-color:#fff;
   border-radius: 6px 6px 6px 6px;
   top: 44%;
   left: 50%;
@@ -107,13 +104,13 @@
 }
 
 .dock-menu-modal-menubar {
-  height: 3vh;
   background-color: #ddd;
   width: 100%;
-  color: #000;
+  color: #606060;
   text-align: center;
   border-radius: 6px 6px 0px 0px;
   padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .modal-content {
@@ -129,9 +126,10 @@
 
 .dock-menu-modal-option {
   float: left;
-  padding: 2px;
   display: flex;
   height: 100%;
+  padding-left: 5px;
+  position: absolute;
 }
 
 .dock-menu-modal-close {
@@ -198,7 +196,7 @@
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: aliceblue;
+    background-color: #fff;
     border-radius: 0px;
     transform: none;
     max-width: 100%;

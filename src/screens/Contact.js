@@ -2,7 +2,7 @@ import React from 'react';
 import './Contact.css'
 import myImage from '../images/chat.png';
 import mail from '../images/social/mail.svg'
-import facebook from '../images/social/facebook.svg'
+import twitter from '../images/social/twitter.svg'
 import linkedin from '../images/social/linkedin.svg'
 import github from '../images/social/github.svg'
 import instagram from '../images/social/insta.svg'
@@ -14,14 +14,29 @@ export default function Contact() {
       <div>
         <h2>Hello Human! Wanna chat?</h2>
       </div>
-      <div>
-        <a href="mailto:koushikmohan1996@gmail.com"><img src={mail} alt="mail" className="social-logo"/></a>
+      <div className="social-menu1">
+        <a href="mailto:koushikmohan1996@gmail.com">
+          <div className="social-logo-div">
+            <img src={mail} alt="mail" className="social-logo" />
+          </div>
+        </a>
+        <a href="https://github.com/koushikmohan1996">
+          <div className="social-logo-div">
+            <img src={github} alt="github" className="social-logo" />
+          </div>
+        </a>
       </div>
-      <div className="social-menu">
-        <a href="https://github.com/koushikmohan1996" target="_blank" rel="noopener noreferrer"><img src={github} alt="github" className="social-logo"/></a>
-        <a href="https://www.linkedin.com/in/koushik-mohan/" target="_blank" rel="noopener noreferrer"><img src={linkedin} alt="linkedin" className="social-logo"/></a>
-        <a href="https://www.instagram.com/k.m.koushik/" target="_blank" rel="noopener noreferrer"><img src={instagram} alt="instagram" className="social-logo"/></a>
-        <a href="https://www.facebook.com/koushik1496" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="facebook" className="social-logo"/></a>
+      <div className="social-menu2">
+        <a href="https://www.linkedin.com/in/koushik-mohan/">
+          <div className="social-logo-div">
+            <img src={linkedin} alt="linkedin" className="social-logo" />
+          </div>
+        </a>
+        <a href="https://twitter.com/KoushikKM96/">
+          <div className="social-logo-div">
+            <img src={twitter} alt="twitter" className="social-logo" />
+          </div>
+        </a>
       </div>
     </div>
   );

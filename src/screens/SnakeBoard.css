@@ -49,11 +49,13 @@
 }
 
 .button{
-    margin-left: 30%;
     width: 150px;
     height: 40px;
     background-color: #ff8b2b;
     border: none;
     color: #fff;
     font-family: SnakeFont;
+    position: absolute;
+    top: 60%;
+    left: 35%;
 }
