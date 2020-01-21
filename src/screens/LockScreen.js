@@ -19,7 +19,7 @@ function LockScreen(props) {
   /*Components */
 
   const Locked = props => (
-    <div className="screen" onClick = { () => setIsLocked(false) }>
+    <div className="screen" style={{cursor:'pointer', overflow:'hidden'}} onClick = { () => setIsLocked(false) }>
       <div className="time">{ timeString }</div>
       <div className="date">{ dateString }</div>
       <div className="locked">
@@ -27,7 +27,7 @@ function LockScreen(props) {
       </div>
     </div>
   );
-  const UnLocked = () => (<div className="screen" style={{ position: 'absolute', width: '100%' }}><Home lock={setIsLocked}/></div>);
+  const UnLocked = () => (<div className="screen" style={{ position: 'absolute', width: '100%', overflow:'hidden'}}><Home lock={setIsLocked}/></div>);
 
 
   /*Util methods */

@@ -5,7 +5,6 @@ import snakeImage from '../images/project/snake.png'
 import fluxoImage from '../images/project/fluxo.png'
 import codeceptImage from '../images/project/codecept.png'
 import iotImage from '../images/project/IOT-gateway.png'
-import Bounce from 'react-reveal/Bounce';
 
 
 export default function Projects() {
@@ -13,14 +12,14 @@ export default function Projects() {
     <div className="projects">
       <ProjectItem
         title="Fluxo"
-        description="Create workflows by between thirdparty apps"
+        description="An easy way to Create workflows with thirdparty apps"
         tech="NodeJS, MongoDB, ReactJS"
         image={fluxoImage}
         url="https://github.com/pesto-students/batch-11-fluxo"
       />
       <ProjectItem
         title="CodeceptJS"
-        description="Contributed to an open source framework for End 2 End Testing Framework for NodeJS"
+        description="Contributed to an open source framework for End 2 End Testing Framework for NodeJS. Click to view my PRs"
         tech="NodeJS"
         image={codeceptImage}
         url="https://github.com/Codeception/CodeceptJS/issues?utf8=%E2%9C%93&q=+author%3Akoushikmohan1996+"
@@ -52,19 +51,17 @@ export default function Projects() {
 
 const ProjectItem = (props) => {
   return (
-    <Bounce>
-      <div className="project-item" onClick={() => window.open(props.url, '_blank')}>
-        <div>
-          <img src={props.image} alt={props.title} class="project-img" />
-          <div className="project-details">
-            <h2>{props.title}</h2>
-            <p>{props.description}</p>
-            <p>Tech stack: {props.tech}</p>
-          </div>
-          <p>{props.title}</p>
+    <div className="project-item" onClick={() => window.open(props.url, '_blank')}>
+      <div>
+        <img src={props.image} alt={props.title} class="project-img" />
+        <div className="project-details">
+          <h2>{props.title}</h2>
+          <p>{props.description}</p>
+          <p>Tech stack: {props.tech}</p>
         </div>
+        <p>{props.title}</p>
       </div>
-    </Bounce>
+    </div>
 
   )
 } 

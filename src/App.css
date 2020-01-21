@@ -1,19 +1,15 @@
-@font-face {
-  font-family: 'MacOSFont';
-  src: local('MacOSFont'), url(./fonts/SanFranciscoText-Regular.otf) format('truetype');
-}
-
 
 .App {
   text-align: center;
   height: 100vh;
-  background-image: url("./images/wallpaper.jpg");
+  background: url(./images/wallpaper.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
   overflow: hidden;
-  font-family: 'MacOSFont'
+  overflow-y: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 .logo {

@@ -27,8 +27,8 @@ export default function Home(props) {
         <span className="notification-title">Notifications</span>
         <Notification
           title="GitHub"
-          content="Created new repository mac-themed-portfolio"
-          url="https://github.com/koushikmohan1996/mac-themed-portfolio" />
+          content="Contributed to codeceptJS"
+          url="https://codecept.io/" />
         <Notification
           title="Profession"
           content="Joined as student in Pesto tech"
