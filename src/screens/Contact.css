@@ -10,7 +10,7 @@
   border-radius: 50%;
   box-shadow: 10px 10px 20px 0px #eae9e9;
   margin: 5%;
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 .social-logo {
@@ -36,15 +36,40 @@
   justify-content: space-evenly;
   margin-top: 10%;
   animation: transformIn .3s ease-in;
-  animation-delay: .45s;
+  animation-delay: .35s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
 
-.social-logo-div {
-  padding: 15px;
-  box-shadow: 2px 3px 20px 0px #eae9e9;
-  border-radius: 50%;
+.social-menu3 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10%;
+  animation: transformIn .3s ease-in;
+  animation-delay: .55s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.resume{
+  color: #9f034d;
+  font-size: 1.5em;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }
 
 @keyframes transformIn {

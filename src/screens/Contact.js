@@ -6,6 +6,7 @@ import twitter from '../images/social/twitter.svg'
 import linkedin from '../images/social/linkedin.svg'
 import github from '../images/social/github.svg'
 import instagram from '../images/social/insta.svg'
+import Resume from '../Koushik_Resume.pdf'
 
 export default function Contact() {
   return (
@@ -35,6 +36,13 @@ export default function Contact() {
         <a href="https://twitter.com/KoushikKM96/">
           <div className="social-logo-div">
             <img src={twitter} alt="twitter" className="social-logo" />
+          </div>
+        </a>
+      </div>
+      <div className="social-menu3">
+        <a target="_blank" rel="nofollow noopener noreferrer" href={Resume}>
+          <div className="resume">
+            Resume
           </div>
         </a>
       </div>
