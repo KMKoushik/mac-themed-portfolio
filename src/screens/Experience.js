@@ -6,6 +6,12 @@ export default function Experience(props) {
   return (
     <div style={{ marginTop: '5%', display: 'flex', justifyContent: 'center' }}>
       <div className="experience">
+      <div className="experienceItem">
+          <Fade bottom>
+            <h2>Full stack developer, Testomat</h2>
+            <p>A Test management tool. Worked in both backend and frontend technologies like Rails, Ember</p>
+          </Fade>
+        </div>
         <div className="experienceItem">
           <Fade bottom>
             <h2>Software Developer, Zoho</h2>

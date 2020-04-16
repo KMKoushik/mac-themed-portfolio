@@ -5,11 +5,19 @@ import snakeImage from '../images/project/snake.png'
 import fluxoImage from '../images/project/fluxo.png'
 import codeceptImage from '../images/project/codecept.png'
 import iotImage from '../images/project/IOT-gateway.png'
+import jobTriageImage from '../images/project/jobtriage.png'
 
 
 export default function Projects() {
   return (
     <div className="projects">
+      <ProjectItem
+        title="JobTriage"
+        description="An interactive way to organize your job search"
+        tech="Ruby on Rails, MongoDB, ReactJS"
+        image={jobTriageImage}
+        url="https://github.com/jobtriage/jobtriage"
+      />
       <ProjectItem
         title="Fluxo"
         description="An easy way to Create workflows with thirdparty apps"

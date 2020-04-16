@@ -18,7 +18,7 @@ export default function AboutMe() {
             <div className="table-row">
               <div class="table-cell column1">Experience</div>
               <div class="table-cell column2">  </div>
-              <div class="table-cell column3">2.7 years</div>
+              <div class="table-cell column3">3 years</div>
             </div>
             <div className="table-row">
               <div class="table-cell column1">Processor</div>

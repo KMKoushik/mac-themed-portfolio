@@ -31,8 +31,8 @@ export default function Home(props) {
           url="https://codecept.io/" />
         <Notification
           title="Profession"
-          content="Joined as student in Pesto tech"
-          url="https://www.pesto.tech/" />
+          content="Joined as developer in Testomat"
+          url="http://testomat.io/" />
       </div>
       <DockMenu>
         <DockMenuGroup name="about" icon={about} title="About me">
